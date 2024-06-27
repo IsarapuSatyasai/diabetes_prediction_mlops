@@ -1,0 +1,6 @@
+pyspark
+mlflow
+flask
+numpy
+scikit-learn
+prometheus-client

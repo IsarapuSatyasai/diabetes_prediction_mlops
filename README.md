@@ -11,29 +11,19 @@ This project is an end-to-end data science pipeline for predicting diabetes usin
 Run the following command to preprocess the data:
 python scripts/data_preprocessing.py
 
-bash
-Copy code
-
 ### Model Training
 Run the following command to train the model:
 python scripts/model_training.py
-
-css
-Copy code
 
 ### Flask App
 To start the Flask app, navigate to the `flask_app` directory and run:
 python app.py
 
-shell
-Copy code
-
 ### Docker
 Build and run the Docker container:
+''
 docker-compose up --build
-
-shell
-Copy code
+''
 
 ### Kubernetes
 Apply the Kubernetes deployment and service:
@@ -94,8 +84,5 @@ The CI/CD pipeline is configured using GitHub Actions. On every push to the `mai
 Install the required dependencies using:
 pip install -r requirements.txt
 
-csharp
-Copy code
-
 ## Author
-This project was developed by [Your Name].
+This project was developed by [Satya Sai Esarapu].

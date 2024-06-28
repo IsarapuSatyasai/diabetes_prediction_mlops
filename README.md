@@ -3,49 +3,7 @@
 ## Overview
 This project is an end-to-end data science pipeline for predicting diabetes using machine learning. It includes data preprocessing, model training, and deployment as a web service.
 
-## Project Structure
-diabetes-project/
-│
-├── data/
-│ └── diabetes.csv
-│ └── preprocessed_data.csv
-│
-├── scripts/
-│ ├── data_preprocessing.py
-│ ├── model_training.py
-│
-├── flask_app/
-│ ├── app.py
-│ ├── templates/
-│ │ └── index.html
-│ ├── static/
-│ │ └── style.css
-│ └── model.pkl
-│
-├── dags/
-│ └── airflow_dag.py
-│
-├── Dockerfile
-├── docker-compose.yml
-├── kubernetes_deployment.yaml
-├── prometheus/
-│ └── prometheus.yml
-├── grafana/
-│ ├── grafana.ini
-│ ├── provisioning/
-│ │ ├── datasources/
-│ │ │ └── datasource.yml
-│ │ ├── dashboards/
-│ │ │ └── dashboard.yml
-│ │ │ └── diabetes_dashboard.json
-├── .github/
-│ └── workflows/
-│ └── ci_cd.yml
-├── requirements.txt
-└── README.md
 
-shell
-Copy code
 
 ## Setup Instructions
 
@@ -81,8 +39,6 @@ Copy code
 Apply the Kubernetes deployment and service:
 kubectl apply -f kubernetes_deployment.yaml
 
-markdown
-Copy code
 
 ### Prometheus and Grafana
 

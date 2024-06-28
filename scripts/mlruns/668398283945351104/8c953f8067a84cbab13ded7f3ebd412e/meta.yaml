@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/win10/Desktop/Data%20Science/diabetes_prediction_mlops/scripts/mlruns/668398283945351104/8c953f8067a84cbab13ded7f3ebd412e/artifacts
+end_time: 1719570540028
+entry_point_name: ''
+experiment_id: '668398283945351104'
+lifecycle_stage: active
+run_id: 8c953f8067a84cbab13ded7f3ebd412e
+run_name: marvelous-wolf-522
+run_uuid: 8c953f8067a84cbab13ded7f3ebd412e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719570535128
+status: 3
+tags: []
+user_id: win10

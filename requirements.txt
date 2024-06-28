@@ -1,6 +1,6 @@
-pyspark
-mlflow
-flask
-numpy
-scikit-learn
-prometheus-client
+flask==2.0.1
+scikit-learn==0.24.2
+pandas==1.3.1
+mlflow==1.19.0
+airflow==2.1.2
+boto3==1.18.26

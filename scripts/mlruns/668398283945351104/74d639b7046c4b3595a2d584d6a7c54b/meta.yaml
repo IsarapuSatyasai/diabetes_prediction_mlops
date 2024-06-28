@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/win10/Desktop/Data%20Science/diabetes_prediction_mlops/scripts/mlruns/668398283945351104/74d639b7046c4b3595a2d584d6a7c54b/artifacts
+end_time: 1719570650079
+entry_point_name: ''
+experiment_id: '668398283945351104'
+lifecycle_stage: active
+run_id: 74d639b7046c4b3595a2d584d6a7c54b
+run_name: unruly-moose-747
+run_uuid: 74d639b7046c4b3595a2d584d6a7c54b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719570646064
+status: 3
+tags: []
+user_id: win10

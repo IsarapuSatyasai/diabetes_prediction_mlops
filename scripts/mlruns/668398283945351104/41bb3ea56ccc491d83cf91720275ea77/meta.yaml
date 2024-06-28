@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/win10/Desktop/Data%20Science/diabetes_prediction_mlops/scripts/mlruns/668398283945351104/41bb3ea56ccc491d83cf91720275ea77/artifacts
+end_time: 1719570636461
+entry_point_name: ''
+experiment_id: '668398283945351104'
+lifecycle_stage: active
+run_id: 41bb3ea56ccc491d83cf91720275ea77
+run_name: grandiose-crow-335
+run_uuid: 41bb3ea56ccc491d83cf91720275ea77
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719570632407
+status: 3
+tags: []
+user_id: win10

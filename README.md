@@ -6,9 +6,8 @@ This project is an end-to-end data science pipeline for predicting diabetes usin
 ## Prerequisites
 - Python 3.8
 - Docker
-- Docker Compose
 - Kubernetes
-- kubectl
+- mlflow
 - Airflow
 - Prometheus
 - Grafana

@@ -4,4 +4,4 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-CMD ["python","scripts/model_training.py","python", "flask_app/app.py"]
+CMD ["python", "flask_app/app.py"]

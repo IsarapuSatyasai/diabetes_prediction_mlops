@@ -1,145 +1,109 @@
 # Diabetes Prediction Project
 
 ## Overview
-This project is an end-to-end data science pipeline for predicting diabetes using machine learning. It includes data preprocessing, model training, and deployment as a web service.
+This project is an end-to-end data science pipeline for predicting diabetes using machine learning. It covers various stages of a typical data science project, including data preprocessing, model training, and deployment as a web service. The project also incorporates modern practices like containerization, orchestration, monitoring, and continuous integration and deployment (CI/CD).
 
-## Project Structure
-diabetes-project/
-│
-├── data/
-│ └── diabetes.csv
-│ └── preprocessed_data.csv
-│
-├── scripts/
-│ ├── data_preprocessing.py
-│ ├── model_training.py
-│
-├── flask_app/
-│ ├── app.py
-│ ├── templates/
-│ │ └── index.html
-│ ├── static/
-│ │ └── style.css
-│ └── model.pkl
-│
-├── dags/
-│ └── airflow_dag.py
-│
-├── Dockerfile
-├── docker-compose.yml
-├── kubernetes_deployment.yaml
-├── prometheus/
-│ └── prometheus.yml
-├── grafana/
-│ ├── grafana.ini
-│ ├── provisioning/
-│ │ ├── datasources/
-│ │ │ └── datasource.yml
-│ │ ├── dashboards/
-│ │ │ └── dashboard.yml
-│ │ │ └── diabetes_dashboard.json
-├── .github/
-│ └── workflows/
-│ └── ci_cd.yml
-├── requirements.txt
-└── README.md
-
-shell
-Copy code
-
-## Setup Instructions
-
-### Data Preprocessing
-Run the following command to preprocess the data:
-python scripts/data_preprocessing.py
-
-bash
-Copy code
-
-### Model Training
-Run the following command to train the model:
-python scripts/model_training.py
-
-css
-Copy code
-
-### Flask App
-To start the Flask app, navigate to the `flask_app` directory and run:
-python app.py
-
-shell
-Copy code
-
-### Docker
-Build and run the Docker container:
-docker-compose up --build
-
-shell
-Copy code
-
-### Kubernetes
-Apply the Kubernetes deployment and service:
-kubectl apply -f kubernetes_deployment.yaml
-
-markdown
-Copy code
-
-### Prometheus and Grafana
-
-#### Prometheus Configuration
-
-1. **Prometheus Configuration File (`prometheus/prometheus.yml`)**
-   - Create a configuration file for Prometheus.
-
-2. **Prometheus Docker Compose Service**
-   - Add a service to your `docker-compose.yml` for Prometheus.
-
-#### Grafana Configuration
-
-1. **Grafana Configuration File (`grafana.ini`)**
-   - Create a configuration file for Grafana.
-
-2. **Grafana Data Source Provisioning (`datasource.yml`)**
-   - Create a new file `datasource.yml` inside the `grafana/provisioning/datasources` directory to provision the Prometheus data source.
-
-3. **Grafana Dashboard Provisioning (`dashboard.yml`)**
-   - Create a new file `dashboard.yml` inside the `grafana/provisioning/dashboards` directory to provision the dashboard.
-
-4. **Grafana Dashboard JSON**
-   - Create a sample dashboard JSON configuration file inside the `grafana/provisioning/dashboards` directory.
-
-### Running Prometheus and Grafana
-
-1. **Start Prometheus and Grafana**
-   - Navigate to the root of your project directory and run `docker-compose up -d`.
-
-2. **Access Prometheus**
-   - Prometheus will be running on `http://localhost:9090`.
-
-3. **Access Grafana**
-   - Grafana will be running on `http://localhost:3000`. Log in with the default credentials (`admin/admin`).
-
-4. **Configure Grafana Data Source and Dashboard**
-   - Grafana should automatically configure the Prometheus data source and the sample dashboard based on the provisioning files provided.
-
-### CI/CD Pipeline
-The CI/CD pipeline is configured using GitHub Actions. On every push to the `main` branch, the pipeline will run the data preprocessing and model training scripts.
-
-## Requirements
+## Prerequisites
 - Python 3.8
 - Docker
 - Kubernetes
+- mlflow
 - Airflow
 - Prometheus
 - Grafana
 - GitHub Actions
 
-## Dependencies
-Install the required dependencies using:
+## Setup Instructions
+
+### Step 1: Clone the Repository
+Clone the project repository to your local machine.
+```bash
+git clone https://github.com/your-username/diabetes-prediction.git
+cd diabetes-prediction
+```
+Step 2: Install Python Dependencies
+Install the required Python dependencies using pip.
+
+```bash
 pip install -r requirements.txt
+```
+Step 3: Data Preprocessing
+Run the data preprocessing script to prepare the dataset.
+```bash
+python scripts/data_preprocessing.py
+```
+Step 4: Model Training
+Train the machine learning model using the training script.
 
-csharp
-Copy code
+```bash
+python scripts/model_training.py
+```
+Step 5: Start the Flask App
+Navigate to the flask_app directory and run the Flask application.
 
-## Author
-This project was developed by [Your Name].
+```bash
+cd flask_app
+python app.py
+```
+The Flask app will be running at http://localhost:5000.
+
+Step 6: Docker
+Build and run the Docker container for the Flask app.
+
+```bash
+docker-compose up --build
+```
+This will start the Flask app, Prometheus, and Grafana containers.
+
+Step 7: Kubernetes
+Apply the Kubernetes deployment and service configurations.
+
+```bash
+kubectl apply -f kubernetes_deployment.yaml
+```
+
+Step 8: Prometheus and Grafana Setup
+Prometheus Configuration
+Create a Prometheus configuration file (prometheus/prometheus.yml).
+
+Add Prometheus service to your docker-compose.yml.
+
+Grafana Configuration
+Create a Grafana configuration file (grafana/grafana.ini).
+Provision the Prometheus data source (datasource.yml).
+Provision the Grafana dashboard (dashboard.yml and diabetes_dashboard.json).
+Step 9: Running Prometheus and Grafana
+Start Prometheus and Grafana using Docker Compose.
+
+```bash
+docker-compose up -d
+```
+Prometheus will be accessible at http://localhost:9090 and Grafana at http://localhost:3000 (default credentials: admin/admin).
+
+Step 10: Configure Grafana Data Source and Dashboard
+Grafana should automatically configure the Prometheus data source and the sample dashboard based on the provisioning files.
+
+Step 11: Access MLflow UI
+MLflow is used for tracking experiments. You can start the MLflow server and access the UI.
+
+```bash
+mlflow ui
+The MLflow UI will be running at http://localhost:5000
+```
+
+CI/CD Pipeline
+The CI/CD pipeline is configured using GitHub Actions. On every push to the main branch, the pipeline will run the data preprocessing and model training scripts.
+
+Accessing the Services
+Flask App: http://localhost:5000
+Prometheus: http://localhost:9090
+Grafana: http://localhost:3000
+MLflow UI: http://localhost:5000
+Dependencies
+Install the required dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+Author
+This project was developed by [Satya Sai Esarapu].

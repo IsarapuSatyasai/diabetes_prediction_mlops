@@ -1,9 +1,7 @@
-FROM python:3.8-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-COPY . .
-
-CMD ["python", "flask_app/app.py"]
+CMD ["python","scripts/model_training.py","python", "flask_app/app.py"]
